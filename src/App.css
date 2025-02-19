@@ -1,0 +1,90 @@
+* {
+    background-color: black !important;
+    color: white;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 30px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    width: 100vw !important;
+    padding: 20px;
+}
+
+#star-wars-logo {
+    width: 200px;
+}
+
+.redes {
+    width: 200px;
+}
+
+.nav-item {
+    border: 1px solid grey;
+    padding: 0px 15px;
+
+    button {
+        color: white !important;
+    }
+}
+
+.nav-link.active {
+    border-bottom: 2px solid #007bff !important;
+    width: 100% !important;
+    display: inline-block !important;
+  }
+
+.nav-div {
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+    margin-bottom: 20px;
+}
+
+.nav-underline .nav-link:focus, .nav-underline .nav-link:hover {
+    border-bottom-color: #0d6efd !important;
+    color: white !important;
+
+}
+
+.nav-underline .nav-link.active {
+    border-bottom-color: #0d6efd !important;
+    color: white !important;
+}
+
+#pills-tab{
+    gap: 0;
+    margin-bottom: 0 !important;
+    padding: 0;
+}
+
+.nav-underline .nav-link {
+    color: grey !important;
+}
+
+.starShipsCards{
+    background-color: #212121 !important;
+    width: 60vw;
+    padding: 20px;
+    border-radius: 2px;
+    h5, p {
+        background-color: #212121 !important;
+        margin: 0;
+        color: rgb(175, 173, 173);
+    }
+}
+
+.cardContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    border-radius: 5px;
+}
