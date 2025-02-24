@@ -8,7 +8,7 @@ function Header() {
     <>
       <header>
         <div className="redes">{mostrarRedes && <p>redes</p>}</div>
-        <img src={starWarsLogo} alt="Star Wars Logo" id="star-wars-logo"></img>
+        <img src={starWarsLogo} alt="Logo de Star Wars" id="star-wars-logo" />
 
         <div className="d-flex align-items-center">
           <button className="btn btn-dark border-none">LOG IN</button>

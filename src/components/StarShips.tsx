@@ -1,35 +1,23 @@
-import { useEffect, useState } from "react";
-
-interface Ship {
-  name: string;
-  model?: string;
-}
+import { useState } from "react";
+import { useStarships } from "../hooks/useStarShips"; 
+import { StarShipData } from "./StarShipData";
 
 function StarShips() {
-  const [starShips, setStarShips] = useState<Ship[]>([]);
-  const [isLoading, setIsLoading] = useState<boolean>(true);
+  const { starShips, isLoading } = useStarships(); 
+  const [selectedShip, setSelectedShip] = useState<number | null>(null);
 
-  async function fetching() {
-    try {
-      const response = await fetch("https://swapi.dev/api/starships/");
-      const data = await response.json();
-      setStarShips(data.results);
-      console.log(data.results); // Verifica si los datos se están obteniendo correctamente
-    } catch (err) {
-      console.error(err);
-    } finally {
-      setIsLoading(false);
+  const handleClick = (index: number) => {
+    if (selectedShip === index) {
+      setSelectedShip(null); // Si ya está seleccionada, deselecciona
+    } else {
+      setSelectedShip(index); // Si no, selecciona esta nave
     }
-  }
-
-  useEffect(() => {
-    fetching();
-  }, []);
+  };
 
   return (
     <>
       <div className="tab-content d-flex justify-content-center align-items-center gap-5" id="pills-tabContent">
-        {/* Pestaña Starships */}
+        {/* Starships */}
         <div
           className="tab-pane fade show active"
           id="pills-starships"
@@ -42,9 +30,22 @@ function StarShips() {
             <div className="cardContainer">
               {starShips.length > 0 ? (
                 starShips.map((ship, index) => (
-                  <div key={index} className="starShipsCards d-flex flex-column">
-                    <h5>{ship.name}</h5>
-                    <p>{ship.model ? ship.model : "Model not available"}</p>
+                  <div key={index}>
+                    <div
+                      className="starShipsCards d-flex flex-column" 
+                      style={{ cursor: "pointer" }}
+                      onClick={() => handleClick(index)}
+                    >
+                      <h5>{ship.name}</h5>
+                      <p>{ship.model ? ship.model : "Model not available"}</p>
+                    </div>
+
+                    {/* Información adicional desplegada */}
+                    {selectedShip === index && (
+                      <div className="starship-details">
+                        <StarShipData name={ship.name} selectedShip={selectedShip} />
+                        </div>
+                    )}
                   </div>
                 ))
               ) : (
@@ -54,7 +55,7 @@ function StarShips() {
           )}
         </div>
 
-        {/* Pestaña Home */}
+        {/* Home */}
         <div
           className="tab-pane fade"
           id="pills-home"
