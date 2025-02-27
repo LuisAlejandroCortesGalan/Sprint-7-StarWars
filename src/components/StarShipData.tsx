@@ -1,34 +1,39 @@
 import { useStarships } from "../hooks/useStarShips";
-import { useStarshipImg } from "../hooks/useStarShipImg";
 
 export const StarShipData = ({
-  name,
+  model,
   selectedShip,
 }: {
-  name: string;
+  model: string | undefined;
   selectedShip: number;
 }) => {
   const { starShips, isLoading } = useStarships();
-  const { starShipsImg } = useStarshipImg(selectedShip);
 
-  // Buscar la nave por el nombre
-  const ship = starShips.find((ship) => ship.name === name);
+  const ship = starShips[selectedShip] || null; 
+  if (!ship) {
+    return <p>No se encontró la nave seleccionada.</p>;
+  }
 
-  console.log("ver img  ", starShipsImg);
-  console.log("ver los datos: ", starShips);
+  const url: string | undefined = ship.url;
+
+  const parts = url?.split('/');
+    
+  const numberImg = parts && parts.length > 1 ? parts[parts.length - 2] : undefined;
+  const shipImg = `../public/data/starships/${numberImg}.jpg`;  
+ 
 
   if (isLoading) {
-    return <p>Loading...</p>;
+    return <p className="text-center">Loading...</p>;
   }
 
   if (!ship) {
-    return <p>No se encontró la nave con el nombre: {name}</p>;
+    return <p>No se encontró la nave con el modelo: {model}</p>;
   }
 
   return (
     <div className="starShipsContainer mt-3">
       <div className="imageDiv">
-        <img className="starShipsImage" src={starShipsImg} alt={ship.name} />
+        <img className="starShipsImage" src={shipImg} alt={ship.name} />
         <div className="informationDiv">
           <h6>{ship.name}</h6>
           <p>
@@ -43,16 +48,9 @@ export const StarShipData = ({
               <p>Credit Cost: {ship.cost_in_credits}</p>
               <p>Atmospheric speed: {ship.max_atmosphering_speed}</p>
             </div>
-            <div>
-              <p>Manufacturer: {ship.manufacturer}</p>
-              <p>Length: {ship.length}</p>
-              <p>Crew: {ship.crew}</p>
-            </div>
           </div>
         </div>
       </div>
-
-      {/* Agrega más detalles de la nave aquí */}
     </div>
   );
 };

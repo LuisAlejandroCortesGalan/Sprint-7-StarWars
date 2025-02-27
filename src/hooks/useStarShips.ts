@@ -1,34 +1,48 @@
 import { useEffect, useState } from "react";
-
+import { usePageContext } from "./usePageContext";
 
 interface Ship {
-    name: string;
-    model?: string;
-    cost_in_credits?: string;
-    max_atmosphering_speed?: string;
-    manufacturer?: string;
-    length?: string;
-    crew?: string;
-  }
+  name: string;
+  model?: string;
+  cost_in_credits?: string;
+  max_atmosphering_speed?: string;
+  manufacturer?: string;
+  length?: string;
+  crew?: string;
+  url?: string;
+}
 
 export function useStarships() {
-  const [starShips, setStarShips] = useState<Ship[]>([]);
-  const [isLoading, setIsLoading] = useState<boolean>(true);
+  const { page, starShips, setStarShips } = usePageContext();
+  const [isLoading, setIsLoading] = useState<boolean>(false);
 
   useEffect(() => {
-    async function fetchData() {
+    const fetchStarships = async () => {
+      if (starShips.length >= 36) return;
+
+      setIsLoading(true);
       try {
-        const response = await fetch("https://swapi.dev/api/starships/");
+        const response = await fetch(`${import.meta.env.VITE_STARSHIPS_API}/?page=${page}`);
         const data = await response.json();
-        setStarShips(data.results);
-      } catch (err) {
-        console.error(err);
+
+        setStarShips((prevStarships) => {
+          const newShips = data.results.filter(
+            (ship: Ship) => !prevStarships.some((s) => s.url === ship.url || s.name === ship.name)
+          );
+          return [...prevStarships, ...newShips];
+        });
+      } catch (error) {
+        console.error("Error fetching starships:", error);
       } finally {
         setIsLoading(false);
       }
-    }
-    fetchData();
-  }, []);
+    };
+
+    
+      fetchStarships();
+    
+  }, [page, starShips.length, setStarShips]); // 🔥 Ahora depende de `page` y `setStarShips`
+
 
   return { starShips, isLoading };
 }

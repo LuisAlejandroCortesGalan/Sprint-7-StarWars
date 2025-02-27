@@ -121,3 +121,12 @@ header {
 .imageDiv {
     max-width: 60vw;    
 }
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+    gap: 20px;
+}
