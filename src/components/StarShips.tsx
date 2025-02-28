@@ -48,9 +48,9 @@ function StarShips() {
           <div className="cardContainer">
             {starShips.length > 0 ? (
               starShips.map((ship, index) => (
-                <div key={ship.url || index}> {/* Usar url como key si está disponible */}
+                <div key={ship.url || index}>
                   <div
-                    className="starShipsCards d-flex flex-column"
+                    className={`starShipsCards d-flex flex-column ${selectedShip === index ? "goldenShadow" : ""}`}
                     style={{ cursor: "pointer" }}
                     onClick={() => handleClick(index)}
                   >

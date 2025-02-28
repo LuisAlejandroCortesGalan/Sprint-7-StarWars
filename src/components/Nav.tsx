@@ -35,6 +35,20 @@ function Nav() {
             STARSHIPS
           </button>
         </li>
+        <li className="nav-item" role="presentation">
+          <button
+            className="nav-link"
+            id="pills-films-tab"
+            data-bs-toggle="pill"
+            data-bs-target="#pills-films"
+            type="button"
+            role="tab"
+            aria-controls="pills-films"
+            aria-selected="false"
+          >
+            FILMS
+          </button>
+        </li>
       </ul>
     </div>
   );
