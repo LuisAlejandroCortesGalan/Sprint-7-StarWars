@@ -92,7 +92,7 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 2vw;
+    gap: 1.2vw;
     border-radius: 0.5vw;
 }
 
@@ -157,9 +157,17 @@ header {
 }
 
 .socialList li {
-    width: 4vw;
-    height: 4vw;
+    width: 3vw;
+    height: 3vw;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
+.socialList img {
+    width: 100%;
+    height: auto;
+    max-width: 3vw; 
+    filter: invert(100%);
+}
+

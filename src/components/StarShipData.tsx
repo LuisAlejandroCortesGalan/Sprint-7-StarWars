@@ -36,7 +36,7 @@ export const StarShipData = ({
         <img className="starShipsImage" src={shipImg} alt={ship.name} />
         <div className="informationDiv">
           <h6>{ship.name}</h6>
-          <p>
+          <p className="pb-4">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto,
             labore unde inventore sint recusandae quos accusamus, quis velit,
             cum tenetur dignissimos alias similique explicabo! In unde deleniti
