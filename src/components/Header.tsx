@@ -5,6 +5,7 @@ import instagramLogo from "../assets/img/instagram.png";
 import twitterLogo from "../assets/img/twitter.png";
 import youtubeLogo from "../assets/img/youtube.png";
 import tiktokLogo from "../assets/img/tiktok.png";
+import { Link } from "react-router-dom";
 
 function Header() {
   return (
@@ -39,12 +40,12 @@ function Header() {
         </li>
       </ul>
         </div>
-        <img src={starWarsLogo} alt="Logo de Star Wars" id="star-wars-logo" />
-
+        <Link to="/"><img src={starWarsLogo} alt="Logo de Star Wars" id="star-wars-logo"/>
+        </Link>
         <div className="d-flex align-items-center">
-          <button className="btn btn-dark border-none">LOG IN</button>
+          <Link to="/LogIn" className="btn btn-dark border-none">LOG IN</Link>
           <p className="m-0 p-2">//</p>
-          <button className="btn btn-dark border-none ">SIGN UP</button>
+          <Link to="/Register" className="btn btn-dark border-none ">SIGN UP</Link>
         </div>
       </header>
     </>

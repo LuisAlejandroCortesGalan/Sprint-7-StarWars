@@ -3,7 +3,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 function Nav() {
   return (
-    <div className="d-flex justify-content-center align-items-center nav-div">
+    <div className="d-flex justify-content-center align-items-center nav-div pt-3">
       <ul className="nav nav-underline mb-3" id="pills-tab" role="tablist">
         {/* Botón de Home */}
         <li className="nav-item" role="presentation">

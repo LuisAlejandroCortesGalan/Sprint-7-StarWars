@@ -30,6 +30,9 @@ export const StarShipData = ({
     return <p>No se encontró la nave con el modelo: {model}</p>;
   }
 
+  console.log(starShips);
+  
+
   return (
     <div className="starShipsContainer mt-3">
       <div className="imageDiv">

@@ -5,6 +5,8 @@ import Nav from "./components/Nav";
 import StarShips from "./components/StarShips";
 import Welcome from "./components/Welcome"; 
 import { PageProvider } from "./pageContext/PageProvider";
+import LogIn from "./components/LogIn";
+import Register from "./components/Register";
 
 function ConditionalNav() {
   const location = useLocation();
@@ -25,6 +27,9 @@ function App() {
               <StarShips />
             </>
           } />
+          <Route path ="/LogIn" element={<LogIn/>}/>
+
+          <Route path="Register" element={<Register/>}/>
         </Routes>
       </PageProvider>
     </Router>
