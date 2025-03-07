@@ -3,7 +3,6 @@ import { Link, useNavigate } from "react-router-dom";
 import starWarsLogo from "../assets/img/star-wars-logo.jpg";
 import disney from "../assets/img/disney.png";
 import sponsors from "../assets/img/sponsors.png";
-
 import { auth } from "../../firebase";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 
@@ -73,8 +72,8 @@ const Register = () => {
             <p>
               With a MyDisney account, you can log in to Star Wars and other
               services across The Walt Disney Family of Companies. Create your
-              account using {email || "your email"}{" "}
-              <Link to="/login">edit</Link>
+              account using your Email or turn back to {" "}
+              <Link to="/login">LOG IN</Link>
             </p>
             <input
               type="email"

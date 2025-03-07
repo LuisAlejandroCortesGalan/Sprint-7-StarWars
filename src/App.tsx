@@ -7,6 +7,8 @@ import Welcome from "./components/Welcome";
 import { PageProvider } from "./pageContext/PageProvider";
 import LogIn from "./components/LogIn";
 import Register from "./components/Register";
+import ProtectedRoute from "./components/ProtectedRoute";
+import { AuthProvider } from "./authContext/AuthContext";
 
 function ConditionalNav() {
   const location = useLocation();
@@ -16,22 +18,25 @@ function ConditionalNav() {
 function App() {
   return (
     <Router>
+      <AuthProvider>
       <PageProvider>
         <ConditionalNav />
         <Routes>
           <Route path="/" element={<Welcome />} />
           <Route path="/starships" element={
+            <ProtectedRoute>
             <>
               <Header />
               <Nav /> 
               <StarShips />
             </>
+            </ProtectedRoute>
           } />
           <Route path ="/LogIn" element={<LogIn/>}/>
-
           <Route path="Register" element={<Register/>}/>
         </Routes>
       </PageProvider>
+      </AuthProvider>
     </Router>
   );
 }

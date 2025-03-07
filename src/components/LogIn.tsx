@@ -32,6 +32,7 @@ const LogIn = () => {
     } catch (error: unknown) {
       if (error instanceof Error) {
         setError(error.message);
+        navigate("/register")
       } else {
         setError("An unexpected error occurred");
       }
