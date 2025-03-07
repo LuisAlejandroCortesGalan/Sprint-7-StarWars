@@ -5,7 +5,6 @@ function Nav() {
   return (
     <div className="d-flex justify-content-center align-items-center nav-div pt-3">
       <ul className="nav nav-underline mb-3" id="pills-tab" role="tablist">
-        {/* Botón de Home */}
         <li className="nav-item" role="presentation">
           <button
             className="nav-link"
@@ -20,7 +19,6 @@ function Nav() {
             HOME
           </button>
         </li>
-        {/* Botón de Starships */}
         <li className="nav-item" role="presentation">
           <button
             className="nav-link active"

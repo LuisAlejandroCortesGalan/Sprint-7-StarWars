@@ -1,4 +1,6 @@
 import { useStarships } from "../hooks/useStarShips";
+import StarShipFilms from "./StarShipFilms";
+import StarShipPilots from "./StarShipPilots";
 
 export const StarShipData = ({
   model,
@@ -9,18 +11,17 @@ export const StarShipData = ({
 }) => {
   const { starShips, isLoading } = useStarships();
 
-  const ship = starShips[selectedShip] || null; 
+  const ship = starShips[selectedShip] || null;
   if (!ship) {
     return <p>No se encontró la nave seleccionada.</p>;
   }
 
   const url: string | undefined = ship.url;
 
-  const parts = url?.split('/');
-    
+  const parts = url?.split("/");
+
   const numberImg = parts && parts.length > 1 ? parts[parts.length - 2] : undefined;
-  const shipImg = `../public/data/starships/${numberImg}.jpg`;  
- 
+  const shipImg = `../public/data/starships/${numberImg}.jpg`;
 
   if (isLoading) {
     return <p className="text-center">Loading...</p>;
@@ -30,11 +31,10 @@ export const StarShipData = ({
     return <p>No se encontró la nave con el modelo: {model}</p>;
   }
 
-  console.log(starShips);
-  
-
   return (
+    <>
     <div className="starShipsContainer mt-3">
+      <h6 className="detailsTittle">STARSHIP</h6>
       <div className="imageDiv">
         <img className="starShipsImage" src={shipImg} alt={ship.name} />
         <div className="informationDiv">
@@ -55,5 +55,14 @@ export const StarShipData = ({
         </div>
       </div>
     </div>
+    <div className="pilotsDiv">
+      <h6 className="detailsTittle">PILOTS</h6>
+      <StarShipPilots ship={ship}/>
+      </div>
+      <div className="filmsDiv"> 
+      <h6 className="detailsTittle">FILMS</h6>
+      <StarShipFilms ship={ship}/>
+      </div>
+    </>
   );
 };

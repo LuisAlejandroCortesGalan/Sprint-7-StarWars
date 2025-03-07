@@ -33,7 +33,7 @@ function StarShips() {
 
   return (
     <div
-      className="tab-content d-flex justify-content-center align-items-center gap-5"
+      className="tab-content d-flex justify-content-center align-items-center gap-5 bgImg"
       id="pills-tabContent"
     >
       <div

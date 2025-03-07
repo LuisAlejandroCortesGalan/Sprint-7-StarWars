@@ -9,7 +9,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../authContext/AuthContext";
 
 function Header() {
-  const { user, loading, logout } = useAuth(); // Incluimos logout
+  const { user, loading, logout } = useAuth(); 
   const navigate = useNavigate();
 
   if (loading) {
@@ -18,8 +18,8 @@ function Header() {
 
   const handleLogout = async () => {
     try {
-      await logout(); // Cerramos sesión usando la función del contexto
-      navigate("/LogIn"); // Redirigimos al login
+      await logout(); 
+      navigate("/LogIn"); 
     } catch (error: unknown) {
       console.error("Error al cerrar sesión:", error);
     }

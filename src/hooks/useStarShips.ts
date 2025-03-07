@@ -10,6 +10,8 @@ interface Ship {
   length?: string;
   crew?: string;
   url?: string;
+  pilots?: string[];
+  films?: string[];
 }
 
 export function useStarships() {
@@ -24,7 +26,6 @@ export function useStarships() {
       try {
         const response = await fetch(`${import.meta.env.VITE_STARSHIPS_API}/?page=${page}`);
         const data = await response.json();
-
         setStarShips((prevStarships) => {
           const newShips = data.results.filter(
             (ship: Ship) => !prevStarships.some((s) => s.url === ship.url || s.name === ship.name)
@@ -38,10 +39,11 @@ export function useStarships() {
       }
     };
 
+    console.log(starShips);
     
       fetchStarships();
     
-  }, [page, starShips.length, setStarShips]); // 🔥 Ahora depende de `page` y `setStarShips`
+  }, [page, starShips.length, setStarShips]);
 
 
   return { starShips, isLoading };
