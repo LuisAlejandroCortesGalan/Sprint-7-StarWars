@@ -2,13 +2,14 @@
 import { Navigate, useLocation } from "react-router-dom";
 import { useAuth } from "../authContext/AuthContext";
 import { ReactNode } from "react";
+import LoadingScreen from "./LoadingScreen";
 
 const ProtectedRoute = ({ children }: { children: ReactNode }) => {
   const { user, loading } = useAuth();
   const location = useLocation();
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <LoadingScreen />
   }
 
   console.log("viendo user desde protected route", user);
