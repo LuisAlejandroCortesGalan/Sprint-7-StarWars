@@ -1,6 +1,8 @@
 import { useStarships } from "../hooks/useStarShips";
+import LoadingScreen from "./LoadingScreen";
 import StarShipFilms from "./StarShipFilms";
 import StarShipPilots from "./StarShipPilots";
+
 
 export const StarShipData = ({
   model,
@@ -11,10 +13,13 @@ export const StarShipData = ({
 }) => {
   const { starShips, isLoading } = useStarships();
 
+
   const ship = starShips[selectedShip] || null;
   if (!ship) {
     return <p>No se encontró la nave seleccionada.</p>;
   }
+
+  
 
   const url: string | undefined = ship.url;
 
@@ -23,17 +28,18 @@ export const StarShipData = ({
   const numberImg = parts && parts.length > 1 ? parts[parts.length - 2] : undefined;
   const shipImg = `../public/data/starships/${numberImg}.jpg`;
 
-  if (isLoading) {
-    return <p className="text-center">Loading...</p>;
-  }
-
   if (!ship) {
     return <p>No se encontró la nave con el modelo: {model}</p>;
   }
 
+
+
   return (
     <>
-    <div className="starShipsContainer mt-3">
+    {
+      isLoading ? (<LoadingScreen/>) :(
+        <>
+      <div className="starShipsContainer mt-3">
       <h6 className="detailsTittle">STARSHIP</h6>
       <div className="imageDiv">
         <img className="starShipsImage" src={shipImg} alt={ship.name} />
@@ -63,6 +69,13 @@ export const StarShipData = ({
       <h6 className="detailsTittle">FILMS</h6>
       <StarShipFilms ship={ship}/>
       </div>
+      </>
+    )}
+
     </>
   );
 };
+function setShowLoading(arg0: boolean): void {
+  throw new Error("Function not implemented.");
+}
+

@@ -424,3 +424,30 @@ a:hover {
     background-size: cover;
     background-position: center;
 }
+
+.starShipsDetails {
+    width: 60vw;
+}
+
+.loadingScreen{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-logout {
+    width: 60%;
+    font-size: 14px !important;
+}
+
+.login-logoutContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 200px;
+}
+
+
+.google-btn img{
+    width: 80px;
+}

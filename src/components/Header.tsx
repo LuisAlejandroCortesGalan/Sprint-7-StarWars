@@ -7,13 +7,14 @@ import youtubeLogo from "../assets/img/youtube.png";
 import tiktokLogo from "../assets/img/tiktok.png";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../authContext/AuthContext";
+import LoadingScreen from "./LoadingScreen";
 
 function Header() {
   const { user, loading, logout } = useAuth(); 
   const navigate = useNavigate();
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <LoadingScreen />
   }
 
   const handleLogout = async () => {
@@ -81,19 +82,20 @@ function Header() {
           <img src={starWarsLogo} alt="Logo de Star Wars" id="star-wars-logo" />
         </Link>
         <div className="d-flex align-items-center">
-          {user ? (<div className="d-flex flex-column align-center">
-            <p>Bienvenido {user.email}</p>
-            <button className="btn btn-dark border-none" onClick={handleLogout}>
+          {user ? (<div className="d-flex flex-column align-center login-logoutContainer">
+            <p className="text-center">Bienvenido {user.email}</p>
+            <button className="btn btn-dark border-none login-logout" onClick={handleLogout}>
               LOG OUT
             </button>
           </div>
           ) : (
-            <Link to="/LogIn" className="btn btn-dark border-none">
+            <Link to="/LogIn" className="btn btn-dark border-none login-logout">
               LOG IN
             </Link>
           )}
         </div>
       </header>
+
     </>
   );
 }
