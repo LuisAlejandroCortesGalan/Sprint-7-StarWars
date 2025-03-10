@@ -444,4 +444,10 @@ a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+    max-width: 200px;
+}
+
+
+.google-btn img{
+    width: 80px;
 }

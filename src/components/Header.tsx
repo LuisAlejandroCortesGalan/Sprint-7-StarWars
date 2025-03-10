@@ -83,7 +83,7 @@ function Header() {
         </Link>
         <div className="d-flex align-items-center">
           {user ? (<div className="d-flex flex-column align-center login-logoutContainer">
-            <p>Bienvenido {user.email}</p>
+            <p className="text-center">Bienvenido {user.email}</p>
             <button className="btn btn-dark border-none login-logout" onClick={handleLogout}>
               LOG OUT
             </button>
