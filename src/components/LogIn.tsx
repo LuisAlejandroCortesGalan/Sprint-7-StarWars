@@ -101,7 +101,7 @@ const LogIn = () => {
             />
             {error && <p className="text-danger">{error}</p>}
           </div>
-          <button onClick={handleSignIn}>Continue</button>          
+          <button onClick={handleSignIn} className="mb-3">Continue</button>          
           {/* Botón de inicio de sesión con Google */}
           <button className="google-btn" onClick={handleGoogleSignIn}>
             Sign in with 

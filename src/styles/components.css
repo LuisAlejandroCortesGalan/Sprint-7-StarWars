@@ -1,0 +1,200 @@
+.starShipsCards {
+    background: var(--color-dark-grey);
+    width: 60vw;
+    padding: var(--spacing-md);
+    border-radius: 0.3vw;
+    transition: box-shadow 0.3s ease;
+}
+.starShipsCards:hover, .goldenShadow {
+    box-shadow: var(--shadow-gold);
+}
+.starShipsCards h5, .starShipsCards p {
+    margin: 0;
+    color: var(--color-grey);
+}
+
+.starShipsContainer {
+    position: relative;
+    max-width: 60vw;
+}
+
+.informationDiv {
+    padding: var(--spacing-sm);
+    width: 60%;
+    height: 50%;
+    background: var(--color-info-bg);
+    border-left: 0.3vw solid var(--color-orange);
+    font-size: clamp(1rem, 2vw, 2rem);
+    overflow-wrap: break-word;
+}
+.informationDiv p {
+    font-size: clamp(0.8rem, 1.2vw, 1.5rem);
+    margin: 0;
+}
+
+.socialList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--spacing-sm);
+    max-width: 300px;
+}
+.socialList li {
+    width: 2vw;
+    height: 2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.socialList img {
+    width: 2vw;
+    height: 2vw;
+    object-fit: cover;
+    filter: invert(100%);
+}
+
+.video-background {
+    position: relative;
+    width: 100vw;
+    height: 90vh;
+    overflow: hidden;
+}
+.video-background__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 30px;
+}
+
+.content a {
+    font-size: 1.5rem;
+    color: var(--color-gold);
+    text-decoration: none;
+    border: 2px solid var(--color-gold);
+    padding: 10px 20px;
+    border-radius: var(--radius-small);
+}
+a:hover {
+    box-shadow: var(--shadow-gold);
+}
+
+.card {
+    margin: 20px;
+    width: 600px;
+    padding: 75px;
+    border-radius: var(--radius-medium);
+    overflow-wrap: break-word;
+}
+.card p {
+    color: var(--color-grey);
+    font-size: 14px;
+}
+
+.card button {
+    background: var(--color-button-yellow);
+    color: var(--color-black);
+    border: none;
+    font-weight: 600;
+    height: 55px;
+    border-radius: 50px;
+}
+
+.checkBoxDiv {
+    display: flex;
+    gap: 15px;
+}
+
+.CloseBtn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+.CloseBtn:hover {
+    transform: scale(1.5);
+}
+
+.detailsTittle {
+    border: 1px solid var(--color-light-grey);
+    border-left: none;
+    border-right: none;
+    padding: 15px;
+}
+
+.pilotCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+.pilotCard div p {
+    width: 200px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    background: var(--color-pilot-bg);
+    color: var(--color-grey);
+    border-top: 1px solid var(--color-orange);
+    font-size: 12px;
+}
+.pilotCard div img {
+    width: 200px;
+}
+
+/* Páginas */
+.register, .login {
+    background: url("https://cdn.registerdisney.go.com/v4/asset/bundler/STARWARS/v4/images/v1/starwars-background-web.webp") no-repeat center/cover;
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+}
+.login a:hover, .register a:hover {
+    box-shadow: none;
+}
+
+#disneyLogo {
+    width: 100px;
+}
+
+.starWarsLoginLogo {
+    width: 250px;
+}
+
+.login input {
+    height: 60px;
+    border-radius: var(--radius-small);
+    padding-left: 20px;
+    color: var(--color-black);
+    background: var(--color-input-bg);
+}
+
+.bgImg {
+    background: url("../src/assets/img/deathStar.jpg") no-repeat center/cover fixed;
+}
+
+.login-logoutContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 300px;
+}
+
+.google-btn img {
+    width: 80px;
+}
