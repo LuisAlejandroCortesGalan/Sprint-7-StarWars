@@ -27,8 +27,8 @@ This project is a React app that displays a list of Star Wars starships using th
 2. Install dependencies: `npm install`
 3. Crear y configurar en la raiz el documento firebase.ts 
 4. Poner en el .env la api
-3. Start the development server: `npm run dev`
-4. (Optional) Run Storybook: `npm run storybook`
+5. Start the development server: `npm run dev`
+6. (Optional) Run Storybook: `npm run storybook`
 
 ## API Usage
 

@@ -41,8 +41,8 @@ export const StarShipData = ({
         <>
       <div className="starShipsContainer mt-3">
       <h6 className="detailsTittle">STARSHIP</h6>
-      <div className="imageDiv">
-        <img className="starShipsImage" src={shipImg} alt={ship.name} />
+      <div className="w-60 d-flex">
+        <img src={shipImg} alt={ship.name} />
         <div className="informationDiv">
           <h6>{ship.name}</h6>
           <p className="pb-4">
@@ -75,7 +75,7 @@ export const StarShipData = ({
     </>
   );
 };
-function setShowLoading(arg0: boolean): void {
-  throw new Error("Function not implemented.");
-}
+// function setShowLoading(arg0: boolean): void {
+//   throw new Error("Function not implemented.");
+// }
 

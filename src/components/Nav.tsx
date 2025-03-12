@@ -3,7 +3,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 function Nav() {
   return (
-    <div className="d-flex justify-content-center align-items-center nav-div pt-3">
+    <div className="d-flex justify-content-center align-items-center nav-div pt-3 mb-3 ">
       <ul className="nav nav-underline mb-3" id="pills-tab" role="tablist">
         <li className="nav-item" role="presentation">
           <button
@@ -31,20 +31,6 @@ function Nav() {
             aria-selected="false"
           >
             STARSHIPS
-          </button>
-        </li>
-        <li className="nav-item" role="presentation">
-          <button
-            className="nav-link"
-            id="pills-films-tab"
-            data-bs-toggle="pill"
-            data-bs-target="#pills-films"
-            type="button"
-            role="tab"
-            aria-controls="pills-films"
-            aria-selected="false"
-          >
-            FILMS
           </button>
         </li>
       </ul>

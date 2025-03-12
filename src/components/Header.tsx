@@ -10,17 +10,17 @@ import { useAuth } from "../authContext/AuthContext";
 import LoadingScreen from "./LoadingScreen";
 
 function Header() {
-  const { user, loading, logout } = useAuth(); 
+  const { user, loading, logout } = useAuth();
   const navigate = useNavigate();
 
   if (loading) {
-    return <LoadingScreen />
+    return <LoadingScreen />;
   }
 
   const handleLogout = async () => {
     try {
-      await logout(); 
-      navigate("/LogIn"); 
+      await logout();
+      navigate("/LogIn");
     } catch (error: unknown) {
       console.error("Error al cerrar sesión:", error);
     }
@@ -28,7 +28,7 @@ function Header() {
 
   return (
     <>
-      <header>
+      <header className="d-flex justify-content-between align-items-start p-4 width-100 flex-wrap">
         <div className="redes">
           <ul className="socialList">
             <li className="facebook">
@@ -82,12 +82,20 @@ function Header() {
           <img src={starWarsLogo} alt="Logo de Star Wars" id="star-wars-logo" />
         </Link>
         <div className="d-flex align-items-center">
-          {user ? (<div className="d-flex flex-column align-center login-logoutContainer">
-            <p className="text-center">Bienvenido {user.email}</p>
-            <button className="btn btn-dark border-none login-logout" onClick={handleLogout}>
-              LOG OUT
-            </button>
-          </div>
+          {user ? (
+            <div className="d-flex flex-column align-center login-logoutContainer">
+              <p className="text-center">
+                Bienvenido
+                <br />
+                {user.email}
+              </p>
+              <button
+                className="btn btn-dark border-none w-60% fs-5"
+                onClick={handleLogout}
+              >
+                LOG OUT
+              </button>
+            </div>
           ) : (
             <Link to="/LogIn" className="btn btn-dark border-none login-logout">
               LOG IN
@@ -95,7 +103,6 @@ function Header() {
           )}
         </div>
       </header>
-
     </>
   );
 }

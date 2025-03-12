@@ -52,7 +52,7 @@ const StarShipFilms = ({ ship }: { ship: Ship }) => {
       {isLoading ? (
         <p>Cargando peliculas...</p>
       ) : filmData.length > 0 ? (
-        <div className="pilotCardContainer">
+        <div className="d-flex flex-wrap gap-4">
           {filmData.map((film, index) => (
             <div className="pilotCard">
                 <div>

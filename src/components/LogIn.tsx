@@ -79,7 +79,7 @@ const LogIn = () => {
 
         <div className="flex-column card">
           <img src={disney} alt="MyDisney logo" id="disneyLogo" />
-          <h3>Enter your email to continue</h3>
+          <h3 className="fw-bold">Enter your email to continue</h3>
           <div>
             <p>
               Log in to Star Wars with your MyDisney account. If you don't have

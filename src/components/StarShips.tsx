@@ -36,7 +36,7 @@ function StarShips() {
 
   return (
     <div
-      className="tab-content d-flex justify-content-center align-items-center gap-5"
+      className="tab-content d-flex justify-content-center align-items-center gap-5 bgImg"
       id="pills-tabContent"
     >
       <div
@@ -47,7 +47,7 @@ function StarShips() {
       >
         {isLoading && starShips.length === 0 ? 
         (<LoadingScreen/>) : (
-          <div className="cardContainer">
+          <div className="d-flex flex-column justify-content-between gap-3 rounded-5">
             {starShips.length > 0 ? (
               starShips.map((ship, index) => (
                 <div key={ship.url || index}>
