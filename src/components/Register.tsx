@@ -108,7 +108,7 @@ const Register = () => {
               </a>
             </p>
           </div>
-          <p className="termsP">
+          <p className="text-grey">
             By creating an account, you agree to our{" "}
             <a href="https://disneytermsofuse.com/english/" target="_blank">
               Terms of Use
@@ -140,21 +140,21 @@ const Register = () => {
             .
           </p>
           {isVisibleTerms && (
-            <div className="visibleTerms">
-              <ul>How we use your personal data and your rights:</ul>
-              <li>
+            <div>
+              <ul className="text-secondary">How we use your personal data and your rights:</ul>
+              <li className="text-secondary">
                 When you visit, shop or register with Disney online or use any
                 Disney online product, service or mobile application, your
                 personal data is controlled by The Walt Disney Company Limited
                 of 3 Queen Caroline Street, London, W6 9PE, United Kingdom.
               </li>
-              <li>
+              <li className="text-secondary">
                 If you are a Disney+ service EU subscriber residing outside the
                 United Kingdom, your personal data is also jointly controlled by
                 The Walt Disney Company (Benelux) B.V., the provider of the
                 Disney+ service.
               </li>
-              <li>
+              <li className="text-secondary">
                 Your personal data is primarily used to provide you with the
                 Disney products and services you request. It may also be used to
                 comply with legal obligations we are subject to or to fulfill
@@ -163,28 +163,28 @@ const Register = () => {
                 illegal activities. With your prior consent, it may also be used
                 to send you offers and promotions.
               </li>
-              <li>
+              <li className="text-secondary">
                 You have a number of rights including the right to request
                 access to, change, or remove your personal data, or to change
                 your marketing preferences (including withdrawing your consent
                 at any time) – please see our Privacy Policy to learn more about
                 managing your marketing preferences or deleting your account.
               </li>
-              <li>
+              <li className="text-secondary">
                 Our Data Protection Officer can be contacted by emailing:
                 dataprotection@disney.co.uk.
               </li>
-              <li>
+              <li className="text-secondary">
                 If you are in the EU, you may reach us through our local
                 Representatives. For more information about our Representatives
                 please check here.
               </li>
-              <li>
+              <li className="text-secondary">
                 You have a right to lodge a complaint with your local Data
                 Protection Supervisory Authority or with the UK Information
                 Commissioner’s Office: https://ico.org.uk/.
               </li>
-              <li>
+              <li className="text-secondary">
                 For more information about Disney’s data collection and use
                 practices please read our Privacy Policy.
               </li>

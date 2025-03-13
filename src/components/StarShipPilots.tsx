@@ -52,7 +52,7 @@ const StarShipPilots = ({ ship }: { ship: Ship }) => {
       {isLoading ? (
         <p>Cargando pilotos...</p>
       ) : pilotsData.length > 0 ? (
-        <div className="pilotCardContainer">
+        <div className="d-flex flex-wrap gap-4">
           {pilotsData.map((pilot, index) => (
             <div className="pilotCard">
                 <div>

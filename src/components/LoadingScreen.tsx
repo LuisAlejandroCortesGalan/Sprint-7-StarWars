@@ -24,7 +24,7 @@ const LoadingScreen = () => {
   return (
     <div>
       {showLoading && (
-        <div className="loadingScreen">
+        <div className="d-flex justify-content-center align-items-center">
           <img src={loadingGif} alt="Cargando..." className="w-32 h-32" />
         </div>
       )}

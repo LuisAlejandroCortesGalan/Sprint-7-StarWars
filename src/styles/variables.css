@@ -1,0 +1,21 @@
+:root {
+    --color-white: #fff;
+    --color-black: #000;
+    --color-gold: rgba(255, 215, 0, 0.8);
+    --color-dark-grey: #212121;
+    --color-grey: #afadad;
+    --color-light-grey: rgba(187, 184, 184, 0.766);
+    --color-orange: #ff4800;
+    --color-button-yellow: #fade4b;
+    --color-input-bg: #e9e8e8;
+    --color-nav-gold: #ffd700;
+    --color-info-bg: rgba(61, 61, 61, 0.05);
+    --color-pilot-bg: #383636;
+    --color-chevron: #0d6efd;
+    --shadow-gold: 0 0 0.5vw 0.2vw var(--color-gold);
+    --radius-large: 70px;
+    --radius-medium: 35px;
+    --radius-small: 5px;
+    --spacing-sm: 1vw;
+    --spacing-md: 1.5vw;
+}

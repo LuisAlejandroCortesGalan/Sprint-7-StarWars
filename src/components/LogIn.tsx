@@ -79,7 +79,7 @@ const LogIn = () => {
 
         <div className="flex-column card">
           <img src={disney} alt="MyDisney logo" id="disneyLogo" />
-          <h3>Enter your email to continue</h3>
+          <h3 className="fw-bold">Enter your email to continue</h3>
           <div>
             <p>
               Log in to Star Wars with your MyDisney account. If you don't have
@@ -101,7 +101,7 @@ const LogIn = () => {
             />
             {error && <p className="text-danger">{error}</p>}
           </div>
-          <button onClick={handleSignIn}>Continue</button>          
+          <button onClick={handleSignIn} className="mb-3">Continue</button>          
           {/* Botón de inicio de sesión con Google */}
           <button className="google-btn" onClick={handleGoogleSignIn}>
             Sign in with 
