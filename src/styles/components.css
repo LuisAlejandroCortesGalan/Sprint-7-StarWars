@@ -157,7 +157,6 @@ a:hover {
     width: 200px;
 }
 
-/* Páginas */
 .register, .login {
     background: url("https://cdn.registerdisney.go.com/v4/asset/bundler/STARWARS/v4/images/v1/starwars-background-web.webp") no-repeat center/cover;
     width: 100vw;
@@ -197,4 +196,8 @@ a:hover {
 
 .google-btn img {
     width: 80px;
+}
+.gif {    
+    border: 1px solid darkred;
+    border-radius: 12px;
 }

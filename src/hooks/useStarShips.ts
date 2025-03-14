@@ -21,7 +21,6 @@ export function useStarships() {
   useEffect(() => {
     const fetchStarships = async () => {
       if (starShips.length >= 36) return;
-
       setIsLoading(true);
       try {
         const response = await fetch(`${import.meta.env.VITE_STARSHIPS_API}/?page=${page}`);
@@ -38,8 +37,6 @@ export function useStarships() {
         setIsLoading(false);
       }
     };
-
-    console.log(starShips);
     
       fetchStarships();
     

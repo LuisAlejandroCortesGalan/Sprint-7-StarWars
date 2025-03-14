@@ -28,7 +28,7 @@ function Header() {
 
   return (
     <>
-      <header className="d-flex justify-content-between align-items-start p-4 width-100 flex-wrap">
+      <header className="d-flex justify-content-between align-items-start p-5 width-100 flex-wrap">
         <div className="redes">
           <ul className="socialList">
             <li className="facebook">
@@ -85,8 +85,7 @@ function Header() {
           {user ? (
             <div className="d-flex flex-column align-center login-logoutContainer">
               <p className="text-center">
-                Bienvenido
-                <br />
+                Bienvenido {" "}
                 {user.email}
               </p>
               <button

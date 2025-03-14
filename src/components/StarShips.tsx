@@ -36,7 +36,7 @@ function StarShips() {
 
   return (
     <div
-      className="tab-content d-flex justify-content-center align-items-center gap-5 bgImg"
+      className="tab-content d-flex justify-content-center align-items-center gap-5 bgImg mt-2"
       id="pills-tabContent"
     >
       <div
@@ -50,20 +50,20 @@ function StarShips() {
           <div className="d-flex flex-column justify-content-between gap-3 rounded-5">
             {starShips.length > 0 ? (
               starShips.map((ship, index) => (
-                <div key={ship.url || index}>
+                <div key={ship.url || index} className="d-flex flex-column justify-items-center align-items-center">
                   <div
-                    className={`starShipsCards d-flex flex-column ${
+                    className={`starShipsCards d-flex flex-column  ${
                       selectedShip === index ? "goldenShadow" : ""
                     }`}
                     style={{ cursor: "pointer" }}
                     onClick={() => handleClick(index)}
                   >
-                    <h5>{ship.name}</h5>
-                    <p>{ship.model ? ship.model : "Model not available"}</p>
+                    <h5 className="fs-6">{ship.name}</h5>
+                    <p className="fs-6">{ship.model ? ship.model : "Model not available"}</p>
                   </div>
 
                   {selectedShip === index && (
-                    <div className="starship-details">
+                    <div className="starship-details d-flex flex-column justify-items-center align-items-center starShipDataContainer">
                       <StarShipData
                         model={ship.model}
                         selectedShip={selectedShip}

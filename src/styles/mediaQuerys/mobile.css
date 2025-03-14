@@ -1,0 +1,171 @@
+@media (min-width: 180px) and (max-width: 420px) {
+
+
+    .login-logoutContainer {
+        font-size: 6px;
+
+        button {
+            font-size: 6px !important;
+        }
+
+        p {
+            margin-bottom: 5px;
+        }
+    }
+
+    .redes {
+        width: 60px;
+        padding-top: 15px;
+    }
+
+    .socialList img {
+        width: 10px;
+        height: 10px;
+    }
+
+    .starShipsContainer img {
+        width: 50%;
+        height: auto !important;
+    }
+
+    .starShipsContainer {
+        max-width: 250px;
+        width: 250px;
+    }
+
+    .starShipDataContainer {
+
+        h6 {
+            font-size: 10px !important;
+        }
+
+        .detailsTittle {
+            padding: 8px;
+        }
+    }
+
+    #star-wars-logo {
+        width: 100px;
+    }
+
+    .nav-item {
+        button {
+            font-size: 12px !important;
+        }
+    }
+
+    .starShipsCards {
+        max-width: 250px;
+        width: 250px;
+        h5 {
+            font-size: 12px !important;
+        }
+
+        p {
+            font-size: 10px !important;
+        }
+    }
+
+    .informationDiv {
+        h6 {
+            font-size: 6px;
+        }
+
+        p {
+            font-size: 5px;
+            padding-bottom: 1px !important;
+        }
+    }
+
+    .pilotCard {
+
+        width: 60px;
+        div img {
+            width: 60px !important;
+        }
+
+        div p {
+            width: 60px !important;
+            font-size: 8px !important;
+            text-align: center;
+        }
+    }
+
+    .pilotsDiv {
+    max-width: 250px;
+            p {
+                font-size: 10px !important;
+            }
+    }
+
+    .filmsDiv {
+    max-width: 250px;
+        p {
+            font-size: 10px !important;
+        }
+    }
+
+    .content {
+        a {
+        font-size: 16px !important;
+        }        
+        h2 {
+            font-size: 22px !important;
+        }
+    }
+
+    .gif {
+        width: 200px;
+    }
+
+    .card {
+        max-width: 250px;
+        width: 250px;
+        padding: 25px;
+
+        h3 {
+            font-size: 12px;
+        }
+
+        p {
+            font-size: 8px;
+            margin-bottom: 5px;
+        }
+
+        input {
+            font-size: 10px;
+            height: 40px;
+            margin-bottom: 10px !important;
+        }
+
+        button {
+            font-size: 12px;
+            height: 30px;
+            margin-bottom: 5px !important;
+
+        }
+
+        .google-icon {
+            width: 40px;
+        }
+
+        a {
+            font-size: 10px;
+        }
+
+        ul {
+            font-size: 10px;
+        }
+        li {
+            font-size: 8px;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    #disneyLogo {
+        width: 50px;
+    }
+}

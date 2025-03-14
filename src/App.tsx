@@ -1,5 +1,4 @@
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
-import "./App.css";
 import Header from "./components/Header";
 import Nav from "./components/Nav";
 import StarShips from "./components/StarShips";

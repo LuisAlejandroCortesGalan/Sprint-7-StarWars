@@ -1,3 +1,6 @@
-@import "./styles/components.css";
-@import "./styles/global.css";
-@import "./styles/variables.css";
+@import "./styles/variables.css";          
+@import "./styles/global.css";            
+@import "./styles/components.css";         
+@import "./styles/mediaQuerys/mobile.css"; 
+@import "./styles/mediaQuerys/bigMobile.css";
+@import "./styles/mediaQuerys/tablet.css";

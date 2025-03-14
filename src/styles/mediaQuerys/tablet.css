@@ -1,0 +1,177 @@
+@media (min-width: 769px) and (max-width: 1024px) {
+    
+        .login-logoutContainer {
+            font-size: 16px;
+            padding-top: 15px;
+    
+            button {
+                font-size: 10px !important;
+            }
+    
+            p {
+                margin-bottom: 5px;
+            }
+        }
+    
+        .redes {
+            width: 140px;
+            padding-top: 30px;
+        }
+    
+        .socialList img {
+            width: 25px;
+            height: 25px;
+        }
+    
+        .starShipsContainer img {
+            width: 50%;
+            height: auto;
+    
+        }
+    
+        .starShipsContainer {
+            max-width: 500px;
+            width: 500px;
+        }
+    
+        .detailsTittle{
+            font-size: 12px;
+            padding: 10px;
+        }
+    
+    
+        #star-wars-logo {
+            width: 220px;
+        }
+    
+        .nav-item {
+            button {
+                font-size: 16px !important;
+            }
+            .nav-dib {
+            margin: 0;
+            }
+        }
+    
+        .starShipsCards {
+            max-width: 500px;
+            width: 500px;
+            h5 {
+                font-size: 14px !important;
+            }
+    
+            p {
+                font-size: 12px !important;
+            }
+        }
+    
+        .informationDiv {
+            h6 {
+                font-size: 14px;
+            }
+    
+            p {
+                font-size: 10px;
+                padding-bottom: 2px !important;
+            }
+        }
+    
+        .pilotCard {
+    
+            width: 100px;
+            div img {
+                width: 100px !important;
+            }
+    
+            div p {
+                width: 100px !important;
+                font-size: 10px !important;
+                text-align: center;
+            }
+        }
+    
+        .pilotsDiv {
+            max-width: 500px;
+            width: 500px;        
+            
+            p {
+                font-size: 10px !important;
+                padding: 5px;
+                margin: 0;
+            }
+        }
+    
+        .filmsDiv {
+            max-width: 500px;
+            width: 500px;      
+            p {
+                font-size: 10px !important;
+                padding: 5px;
+                margin: 0;
+            }
+        }
+    
+        .content {
+            a {
+            font-size: 22px !important;
+            }        
+            h2 {
+                font-size: 30px !important;
+            }
+        }
+    
+        .gif {
+            width: 450px;
+        }
+    
+        .card {
+            max-width: 400px;
+            width: 400px;
+            padding: 40px;
+    
+            h3 {
+                font-size: 14px;
+            }
+    
+            p {
+                font-size: 11px;
+                margin-bottom: 10px;
+            }
+    
+            input {
+                font-size: 14px;
+                height: 50px;
+                margin-bottom: 15px !important;
+            }
+    
+            button {
+                font-size: 14px;
+                height: 40px;
+                margin-bottom: 10px !important;
+    
+            }
+    
+            .google-icon {
+                width: 60px;
+            }
+    
+            a {
+                font-size: 10px;
+            }
+    
+            ul {
+                font-size: 12px;
+            }
+            li {
+                font-size: 10px;
+            }
+    
+            img {
+                width: 100%;
+            }
+        }
+    
+        #disneyLogo {
+            width: 80px;
+        }
+    }

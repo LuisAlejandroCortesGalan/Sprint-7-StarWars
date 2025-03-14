@@ -3,11 +3,11 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 function Nav() {
   return (
-    <div className="d-flex justify-content-center align-items-center nav-div pt-3 mb-3 ">
-      <ul className="nav nav-underline mb-3" id="pills-tab" role="tablist">
+    <div className="d-flex justify-content-center align-items-center nav-div p-0 m-0 p-sm-1 m-sm-1">
+      <ul className="nav nav-underline p-1" id="pills-tab" role="tablist">
         <li className="nav-item" role="presentation">
           <button
-            className="nav-link"
+            className="nav-link fs-6"
             id="pills-home-tab"
             data-bs-toggle="pill"
             data-bs-target="#pills-home"
@@ -21,7 +21,7 @@ function Nav() {
         </li>
         <li className="nav-item" role="presentation">
           <button
-            className="nav-link active"
+            className="nav-link active fs-6"
             id="pills-starships-tab"
             data-bs-toggle="pill"
             data-bs-target="#pills-starships"
