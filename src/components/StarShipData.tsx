@@ -42,7 +42,7 @@ export const StarShipData = ({
       <div className="starShipsContainer mt-3">
       <h6 className="detailsTittle">STARSHIP</h6>
       <div className="w-60 d-flex">
-        <img src={shipImg} alt={ship.name} />
+        <img src={shipImg} alt={ship.name} className="w-50"/>
         <div className="informationDiv">
           <h6>{ship.name}</h6>
           <p className="pb-4">
@@ -61,11 +61,11 @@ export const StarShipData = ({
         </div>
       </div>
     </div>
-    <div className="pilotsDiv">
+    <div className="pilotsDiv w-100">
       <h6 className="detailsTittle">PILOTS</h6>
       <StarShipPilots ship={ship}/>
       </div>
-      <div className="filmsDiv"> 
+      <div className="filmsDiv w-100"> 
       <h6 className="detailsTittle">FILMS</h6>
       <StarShipFilms ship={ship}/>
       </div>

@@ -38,9 +38,7 @@ const Register = () => {
         throw new Error("Password must be at least 6 characters long");
       }
       const userCredential = await createUserWithEmailAndPassword(auth, email, password);
-      console.log("Usuario creado exitosamente:", userCredential.user);
-      console.log();
-      
+      console.log("Usuario creado exitosamente:", userCredential.user);      
       navigate("/starShips");
     } catch (error: unknown) {
       if (error instanceof Error) {

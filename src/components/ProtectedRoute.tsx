@@ -11,9 +11,7 @@ const ProtectedRoute = ({ children }: { children: ReactNode }) => {
   if (loading) {
     return <LoadingScreen />
   }
-
-  console.log("viendo user desde protected route", user);
-
+  
   if (!user) {
     return <Navigate to="/LogIn" state={{ from: location.pathname }} replace />;
   }

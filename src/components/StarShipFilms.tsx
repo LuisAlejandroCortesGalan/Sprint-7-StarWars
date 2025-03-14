@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import aNewHope from "../assets/img/films/aNewHope.jpg"
+import aNewHope from "../assets/img/films/aNewHope.jpg";
 
 interface Ship {
   name: string;
@@ -15,17 +15,17 @@ interface Ship {
 }
 
 interface Film {
-    title: string;
+  title: string;
 }
 
 const StarShipFilms = ({ ship }: { ship: Ship }) => {
-  const [filmData, setfilmData] = useState<Film[]>([]);
+  const [filmData, setFilmData] = useState<Film[]>([]);
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    const fetchfilms = async () => {
+    const fetchFilms = async () => {
       if (!ship.films || ship.films.length === 0) {
-        setfilmData([]);
+        setFilmData([]);
         return;
       }
 
@@ -35,37 +35,37 @@ const StarShipFilms = ({ ship }: { ship: Ship }) => {
           fetch(filmUrl).then((res) => res.json())
         );
         const films = await Promise.all(filmPromises);
-        setfilmData(films);
+        setFilmData(films);
       } catch (error) {
         console.error("Error fetching films:", error);
-        setfilmData([]);
+        setFilmData([]);
       } finally {
         setIsLoading(false);
       }
     };
 
-    fetchfilms();
-  }, [ship.films]); 
+    fetchFilms();
+  }, [ship.films]);
 
   return (
     <>
       {isLoading ? (
-        <p>Cargando peliculas...</p>
+        <p>Cargando películas...</p>
       ) : filmData.length > 0 ? (
         <div className="d-flex flex-wrap gap-4">
           {filmData.map((film, index) => (
-            <div className="pilotCard">
-                <div>
+            <div key={film.title || index} className="pilotCard">
+              <div>
                 <img src={aNewHope} alt={film.title} />
-                </div>
-            <div>
-            <p key={index}>{film.title.toLocaleUpperCase()}</p> 
-            </div>
+              </div>
+              <div>
+                <p>{film.title.toLocaleUpperCase()}</p>
+              </div>
             </div>
           ))}
         </div>
       ) : (
-        <p>No hay pilotos registrados.</p>
+        <p>No hay películas registradas.</p>
       )}
     </>
   );

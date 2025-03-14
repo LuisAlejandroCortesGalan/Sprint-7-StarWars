@@ -2,30 +2,43 @@ import { useEffect, useState } from "react";
 import loadingGif from "../assets/video/loading.gif";
 import { useStarships } from "../hooks/useStarShips";
 
-const LoadingScreen = () => {
-  const [showLoading, setShowLoading] = useState(true);
-  const { starShips, isLoading } = useStarships();
+const LoadingScreen = ({ asSpinner = false }) => {
+  const [showLoading, setShowLoading] = useState(!asSpinner);
+  const [minTimeElapsed, setMinTimeElapsed] = useState(false);
+  const { isLoading } = useStarships();
 
   useEffect(() => {
     let timeout: NodeJS.Timeout;
 
-    if (isLoading) {
-      setShowLoading(true); // Muestra el gif cuando empieza la carga
-      // Si la carga es muy rápida, la imagen se mantendrá visible al menos 1 segundo
-      timeout = setTimeout(() => setShowLoading(true), 10000); // Tiempo mínimo de 1 segundo
+    if (asSpinner) {
+      if (isLoading) {
+        setShowLoading(true);
+        setMinTimeElapsed(false);
+        timeout = setTimeout(() => setMinTimeElapsed(true), 1000);
+      } else if (!isLoading && showLoading) {
+        if (minTimeElapsed) {
+          setShowLoading(false);
+        } else {
+          timeout = setTimeout(() => setShowLoading(false), 1000);
+        }
+      }
     } else {
-      // Si la carga termina, espera 1 segundo antes de ocultar el gif
-      timeout = setTimeout(() => setShowLoading(false), 10000);
+      setShowLoading(true);
     }
 
-    return () => clearTimeout(timeout); // Limpiar el timeout cuando se desmonte
-  }, [isLoading]); // Este efecto solo depende de `isLoading`
+    return () => clearTimeout(timeout);
+  }, [asSpinner, isLoading, minTimeElapsed, showLoading]);
 
   return (
-    <div>
+    <div className="m-3 rounded-3 gif">
       {showLoading && (
         <div className="d-flex justify-content-center align-items-center">
-          <img src={loadingGif} alt="Cargando..." className="w-32 h-32" />
+          <img 
+            src={loadingGif} 
+            alt="Cargando..." 
+            className="w-32 h-32 gif"
+            style={{ animation: 'infinite' }} 
+          />
         </div>
       )}
     </div>
