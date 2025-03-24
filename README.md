@@ -14,7 +14,7 @@ This project is a React app that displays a list of Star Wars starships using th
 ## Technologies Used
 
 - React (with React Router for navigation)
-- Redux or Context for state management
+- Context for state management
 - JSON-server-auth for authentication
 - SWAPI API for starship data
 - Firebase for user management
