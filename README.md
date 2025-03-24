@@ -66,11 +66,7 @@ VITE_FIREBASE_APP_ID=your_app_id
 
 ## Future Improvements
 
-- Infinite scroll for better UX
 - More styling refinements
 - Additional unit tests
 
----
-
-Made with ❤️ by a Star Wars fan!
 
